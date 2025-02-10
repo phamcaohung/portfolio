@@ -296,7 +296,7 @@ body {
 }
 
 .home-info p {
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     font-size: 22px;
     color: var(--text-black-700);
 }
@@ -315,8 +315,8 @@ body {
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
+    left: 20px;
+    top: -50px;
 }
 
 .home-img::after {
@@ -326,8 +326,8 @@ body {
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: -20px;
-    bottom: -40px;
+    right: 20px;
+    bottom: 40px;
 }
 
 .home .home-img img {
@@ -369,7 +369,7 @@ body {
 .about .about-content .personal-info {
     flex: 0 0 75%;
     max-width: 75%;
-    margin-top: 40px;
+    margin-top: 15px;
 }
 
 .about .about-content .personal-info .info-item {
@@ -404,7 +404,7 @@ body {
 .about .about-content .skills {
     flex: 0 0 25%;
     max-width: 25%;
-    margin-top: 40px;
+    margin-top: 15px;
 }
 
 .about .about-content .skills .skills-item {
@@ -484,6 +484,22 @@ body {
     padding-bottom: 50px;
 }
 
+.about .about-content .timeline .timeline-item .university {
+    display: flex;
+}
+
+.about .about-content .timeline .timeline-item .university img {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.about .about-content .timeline .timeline-item .university h4 {
+    flex: 0 0 80%;
+    max-width: 80%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
 .about .about-content .timeline .timeline-item:last-child {
     padding-bottom: 0;
 }
@@ -532,71 +548,23 @@ body {
     font-size: 16px;
     text-align: justify;
     color: var(--text-black-700);
+    margin-top: 20px;
 }
 
-
-/* Service */
-
-.service .container {
-    padding-bottom: 40px;
-}
-
-.service .service-item {
-    margin-bottom: 30px;
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-}
-
-.service .service-item .service-item-inner {
-    background-color: var(--bg-black-100);
-    border: 1 solid var(--bg-black-50);
-    border-radius: 10px;
-    padding: 30px 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.service .service-item .service-item-inner:hover {
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-}
-
-.service .service-item .service-item-inner .icon {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 30px;
-    text-align: center;
-}
-
-.service .service-item .service-item-inner .icon .fa {
-    font-size: 40px;
-    line-height: 60px;
-    color: var(--skin-color);
-    transition: all 0.3s ease;
-}
-
-.service .service-item .service-item-inner:hover .icon {
-    background: var(--skin-color);
-}
-
-.service .service-item .service-item-inner:hover .icon .fa {
-    font-size: 25px;
-    color: #ffffff;
-}
-
-.service .service-item .service-item-inner h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: var(--text-black-900);
-    font-weight: 700;
-    text-transform: capitalize;
-}
-
-.service .service-item .service-item-inner p {
-    font-size: 16px;
+.about .about-content .timeline .timeline-text a {
+    text-decoration: underline;
     color: var(--text-black-700);
+}
+
+.about .about-content .timeline .location {
     line-height: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 29px;
+}
+
+.about .about-content .timeline .location i {
+    margin-right: 5px;
 }
 
 
@@ -618,8 +586,8 @@ body {
 }
 
 .portfolio .portfolio-item {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    flex: 0 0 100%;
+    max-width: 100%;
     margin-bottom: 30px;
 }
 
@@ -630,9 +598,45 @@ body {
     cursor: pointer;
 }
 
+.portfolio .portfolio-item-inner .portfolio-img {
+    display: flex;
+    height: 300px;
+}
+
 .portfolio .portfolio-item-inner .portfolio-img img {
-    width: 100%;
-    display: block;
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-info {
+    height: 170px;
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-info .title {
+    font-size: 22px;
+    text-align: center;
+    color: var(--text-black-900);
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-info .description {
+    font-size: 18px;
+    color: var(--text-black-700);
+    padding-top: 10px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-info .link {
+    font-size: 18px;
+    color: var(--text-black-700);
+    margin-top: 10px;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-info .link a{
+    text-decoration: underline;
+    color: var(--text-black-900);
 }
 
 
@@ -662,6 +666,12 @@ body {
 .contact .contact-info-item .icon {
     display: inline-block;
 }
+
+.contact .contact-info-item .icon p a {
+    text-decoration: underline;
+    color: var(--text-black-700);
+}
+
 
 .contact .contact-info-item .icon .fa {
     font-size: 25px;
@@ -872,5 +882,88 @@ body {
         margin-left: 4px;
         display: inline-block;
     }
+
+}
+
+@media(max-width: 320px) {
+    /* Home */
+    .home .home-info .hire-me {
+        display: block;
+        text-align: center;
+    }
+
+    .home-img::before {
+        content: '';
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        border-top: 10px solid var(--skin-color);
+        border-left: 10px solid var(--skin-color);
+        left: -15px;
+        top: -30px;
+    }
+
+    .home-img::after {
+        content: '';
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        border-bottom: 10px solid var(--skin-color);
+        border-right: 10px solid var(--skin-color);
+        right: -20px;
+        bottom: -25px;
+    }
+
+    .about .about-content .personal-info .info-item p span {
+        margin-left: 0px;
+    }
+
+    .about .about-content .buttons {
+        width: 100%;
+    }
+
+    .about .about-content .buttons .btn {
+        display: block;
+        text-align: center;
+    }
+
+    .about .about-content .timeline .timeline-item .university {
+        display: block;
+        text-align: center;
+    }
+    
+    .about .about-content .timeline .timeline-item .university img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .about .about-content .timeline .timeline-item .university h4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: start;
+        margin-top: 0px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .portfolio .portfolio-item-inner .portfolio-img {
+        display: block;
+        height: 720px;
+    }
+    
+    .portfolio .portfolio-item-inner .portfolio-img img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 170px;
+    }
+    
+    .portfolio .portfolio-item-inner .portfolio-img .portfolio-info {
+        height: 170px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+
 
 }
